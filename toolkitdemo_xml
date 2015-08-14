@@ -1,0 +1,21 @@
+ POST to http://apic1/api/mo/uni.xml
+ 
+ 
+<polUni>
+<fvTenant dn="uni/tn-Matrix” name="Matrix">
+<fvCtx name="matrix-router"/>
+<fvBD name="BD1”>
+<fvRsCtx tnFvCtxName="matrix-router" />
+<fvSubnet ip="10.0.0.1/24" scope="public"/>
+</fvBD>
+<fvAp name="RedOrBlueANP">
+<fvAEPg name="Red”>
+<fvRsBd tnFvBDName="BD1"/>
+<fvRsDomAtt tDn="uni/vmmp-VMware/dom-Datacenter"/>
+</fvAEPg>
+<fvAEPg name="Blue”>
+<fvRsBd tnFvBDName="BD1"/>
+<fvRsDomAtt tDn="uni/vmmp-VMware/dom-Datacenter"/>
+</fvAEPg>
+</fvTenant>
+</polUni> 
